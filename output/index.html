@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Metadata about the presentation -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>gpt-invention</title>
+
+    <meta name="description" content="投資？我都交給我的高級伴讀書僮- GPT！">
+    <meta name="author" content="Ben Chen">
+
+    <!-- Presentation Styles -->
+    <link rel="stylesheet" href="static/revealjs/dist/reset.css">
+    <link rel="stylesheet" href="static/revealjs/dist/reveal.css">
+
+    
+      <link rel="stylesheet" href="static/revealjs/dist/theme/black.css" id="theme">
+    
+
+    
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="static/revealjs/plugin/highlight/monokai.css" id="highlight-theme">
+  </head>
+
+  <body>
+    <!-- Presentation body -->
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  # Gpt Invention
+
+Start from here!
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+<!-- .slide: data-background="#999999" -->
+
+<!-- .slide: data-background-iframe="media/flow.html" -->
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Data
+
+### Annual Report
+
+- [Financial Modeling Prep](https://site.financialmodelingprep.com/)
+    - https://site.financialmodelingprep.com/developer/docs/#Annual-Reports-on-Form-10-K
+
+### Stock Price
+- total 1505 stocks
+    - S&P500
+    - S&P400
+    - S&P600
+- package: `openbb`
+    - https://openbb.co/
+    - ![](https://hackmd.io/_uploads/BktMtfN1a.png)
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Sample
+
+- train: 1k datapoints (out of 17.4k)
+- test: 500 datapoints (out of 6.8k) 
+
+
+
+## Cost: 
+
+- Money: $60
+- Time: 50 hours
+
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Embedding Model
+
+
+### all-mpnet-base-v2
+This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search.
+https://huggingface.co/sentence-transformers/all-mpnet-base-v2
+
+
+```python!
+embedding_model = LangchainEmbedding(   HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
+    ) 
+```
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+### Massive Text Embedding Benchmark
+https://huggingface.co/blog/mteb
+![](https://hackmd.io/_uploads/Bkq8xozJT.png)
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+![](https://hackmd.io/_uploads/B1NrxsG16.png)
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+🏎 Maximum speed Models like Glove offer high speed, but suffer from a lack of context awareness resulting in low average MTEB scores.
+
+⚖️ Speed and performance Slightly slower, but significantly stronger, ==all-mpnet-base-v2== or all-MiniLM-L6-v2 provide a good balance between speed and performance.
+
+💪 Maximum performance Multi-billion parameter models like ST5-XXL, GTR-XXL or SGPT-5.8B-msmarco dominate on MTEB. They tend to also produce bigger embeddings like SGPT-5.8B-msmarco which produces 4096 dimensional embeddings requiring more storage!
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Vector DB
+
+Chroma
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Questions
+
+27 questions
+
+```json
+{
+    "management":"Does the company have a clear strategy for growth and innovation? Are there any recent strategic initiatives or partnerships?"
+}
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+```
+1. feature_overall	
+2. feature_revenue_1	
+3. feature_revenue_2	
+4. feature_revenue_3	
+5. feature_profit_1	
+6. feature_profit_2	
+7. feature_debt_1	
+8. feature_cashflow_2	
+9. feature_dividend	
+10. feature_management_1	
+11. feature_management_2	
+12. feature_industry_1	
+13. feature_industry_2	
+14. feature_research	
+15. feature_guidance	
+16. feature_leadership	
+17. feature_macro	
+18. feature_diversification	
+19. feature_customerbase	
+20. feature_esg	
+21. feature_competition_1	
+22. feature_competition_2	
+23. feature_ip	
+24. feature_digitaltransformation
+25. feature_regulations	
+26. feature_onlinepresence	
+27. feature_legal
+
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Model
+
+- Linear Regression: enforces non-negativity in the coefficients
+
+
+- X
+    - Confidence Scores from GPT-3.5-Turbo
+- Y: percentage return is calculated between two successive annual report filing dates
+    - target_custom_22 
+        - Annual Return
+        - target created from 12 month normalised returns per year (aka era) and then binned
+    - target_custom_2
+        - 98th percentile of return from the filing date represented as target max
+        - target created from max normalised returns in the span of 12 months per year (aka era) and then binned
+
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+## Result
+
+![](https://hackmd.io/_uploads/ryQ3nlmk6.png)
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+![](https://hackmd.io/_uploads/BJX3ngXkp.png)
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+![](https://hackmd.io/_uploads/rkXhhx7J6.png)
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+![](https://hackmd.io/_uploads/Hy7hne7yT.png)
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+![](https://hackmd.io/_uploads/rkQh3e7J6.png)
+
+
+                </textarea>
+              </section>
+            
+          
+        
+          
+            
+              <section data-markdown>
+                <textarea data-template>
+                  
+
+![](https://hackmd.io/_uploads/Symnhl7J6.png)
+
+                </textarea>
+              </section>
+            
+          
+        
+      </div>
+
+    </div>
+
+    <!-- Reveal.js script -->
+    <script src="static/revealjs/dist/reveal.js"></script>
+
+    <!-- Reveal.js plugins -->
+    <script src="static/revealjs/plugin/markdown/markdown.js"></script>
+    <script src="static/revealjs/plugin/highlight/highlight.js"></script>
+    <script src="static/revealjs/plugin/search/search.js"></script>
+    <script src="static/revealjs/plugin/notes/notes.js"></script>
+    <script src="static/revealjs/plugin/math/math.js"></script>
+    <script src="static/revealjs/plugin/zoom/zoom.js"></script>
+
+    <script>
+      Reveal.initialize({
+        math: {
+          mathjax: 'static/mathjax/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          // pass other options into `MathJax.Hub.Config()`
+          TeX: { Macros: { RR: "{\\bf R}" } }
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealSearch,
+          RevealNotes,
+          RevealMath,
+          RevealZoom
+        ]
+      });
+
+      Reveal.configure({"autoAnimate": true, "autoAnimateDuration": 1.0, "autoAnimateEasing": "ease", "autoAnimateMatcher": null, "autoAnimateStyles": ["opacity", "color", "background-color", "padding", "font-size", "line-height", "letter-spacing", "border-width", "border-color", "border-radius", "outline", "outline-offset"], "autoAnimateUnmatched": true, "autoPlayMedia": null, "autoSlide": 0, "autoSlideMethod": null, "autoSlideStoppable": true, "backgroundTransition": "fade", "center": true, "controls": true, "controlsBackArrows": "faded", "controlsLayout": "bottom-right", "controlsTutorial": true, "defaultTiming": null, "disableLayout": false, "display": "block", "embedded": false, "focusBodyOnPageVisibilityChange": true, "fragmentInURL": true, "fragments": true, "hash": true, "hashOneBasedIndex": false, "help": true, "hideCursorTime": 5000, "hideInactiveCursor": true, "history": true, "keyboard": true, "keyboardCondition": null, "loop": false, "mobileViewDistance": 2, "mouseWheel": false, "navigationMode": "default", "overview": true, "pause": true, "pdfPageHeightOffset": -1, "pdfSeparateFragments": true, "postMessage": true, "postMessageEvents": false, "preloadIframes": null, "previewLinks": false, "progress": true, "respondToHashChanges": true, "rtl": false, "showNotes": false, "showSlideNumber": "all", "shuffle": false, "slideNumber": false, "touch": true, "transition": "slide", "transitionSpeed": "default", "viewDistance": 3});
+    </script>
+  </body>
+</html>

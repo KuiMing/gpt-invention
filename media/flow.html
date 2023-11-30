@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+        body {
+            margin: 0; /* Remove default margin */
+            text-align: center; /* Center content horizontally */
+        }
+        .content {
+            display: inline-block; /* Allows text-align to center it */
+            text-align: left; /* Aligns the text inside the pre block to the left */
+        }
+    </style>
+  </head>
+  <body>
+    <div class="'content">
+        <h1>流程</h1>
+        <pre class="mermaid">
+            graph TD;
+            subgraph Build 10-K Vector Database
+            A[Annual Report]-->|all-mpnet-base-v2|B[Embedding Vector]-->|Llama-index|C[(Chroma)]
+            end
+            C-->F[Find Report Chunk];
+            subgraph Deal_with_Questions
+            D[Question]-->|all-mpnet-base-v2|E[Embedding Vector]
+            end
+            E-->F-->|GPT-3.5-Trubo|G[Confidence Score]
+            subgraph Training
+            G-->H[Linear Regression]
+            I[Target Value]-->H
+            end
+            H-->J[Prediction Return]
+            classDef orange fill:#FFE4CA,stroke:#333
+            classDef red fill:#FFB5B5,stroke:#333
+            class Deal_with_Questions orange
+            class Training red
+        </pre>
+    </div>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    </script>
+  </body>
+</html>
