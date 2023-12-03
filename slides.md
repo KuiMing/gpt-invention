@@ -17,11 +17,16 @@ Start from here!
 - [Financial Modeling Prep](https://site.financialmodelingprep.com/)
     - https://site.financialmodelingprep.com/developer/docs/#Annual-Reports-on-Form-10-K
 
+----
+
 ### Stock Price
 - total 1505 stocks
     - S&P500
     - S&P400
     - S&P600
+
+----
+
 - package: `openbb`
     - https://openbb.co/
     - ![](https://hackmd.io/_uploads/BktMtfN1a.png)
@@ -145,24 +150,103 @@ Chroma
 
 ## Result
 
-![](https://hackmd.io/_uploads/ryQ3nlmk6.png)
+----
+
+
+<!-- .slide: data-background="https://hackmd.io/_uploads/BksjiDtr6.png" -->
+
+----
+
+<!-- .slide: data-background="https://hackmd.io/_uploads/HyC4hwYST.png" -->
+
+
+----
+
+
+<!-- .slide: data-background="https://hackmd.io/_uploads/B1CVnPKHp.png" -->
+
+----
+
+<!-- .slide: data-background="https://hackmd.io/_uploads/HyCVnwFra.png" -->
+
+----
+
+
+
+
+<!-- .slide: data-background="https://hackmd.io/_uploads/rJCE2PFHa.png" -->
+
+----
+
+<!-- .slide: data-background="https://hackmd.io/_uploads/rJ0VhvFB6.png" -->
+
+----
+
+- 挑選股票
+    - 每個月月底預測下個月最強的五檔股票
+    - 若上個月所挑出來的股票比較強，則會被保留下來
+    - 綜合上述做法，挑出五檔股票
+- 月初開盤進場，月底收盤出場
+
+
+----
+
+<!-- .slide: data-background-iframe="media/cumprod_amount_2018_2022.html" -->
+
+
+----
+
+<!-- .slide: data-background-iframe="media/cumprod_amount_2002_2022.html" -->
+
+
+----
+
+- 避開突發的損失
+    - 下跌 10 % 就停止交易
+    - 觀察下個月的情況，若可獲利，就進場下單
+
+
+----
+
+<!-- .slide: data-background-iframe="media/cumprod_amount_2018_2022_trick.html" -->
+
+
+----
+
+
+<!-- .slide: data-background-iframe="media/cumprod_amount_2002_2022_trick.html" -->
+
+----
+
+<!-- .slide: data-background-iframe="media/annual_return_2002_2022.html" -->
+
+
+----
+
+- 年化報酬率：14%
+- 最大交易回落：28%
+
+----
+
+<!-- .slide: data-background-iframe="media/cumprod_amount_2023.html" -->
 
 ---
 
-![](https://hackmd.io/_uploads/BJX3ngXkp.png)
+分年分配目標值：
+目的：為了在每年內相對排名股票的回報。
+方法：每年單獨分配股票的目標值，這樣可以更好地比較同一年內不同股票的表現。
 
----
+回報的排名和標準化：
+首先：回報首先被排名，這意味著根據其回報率對股票進行排序。
+然後：然後對排名後的回報進行標準化，這有助於消除數據中的任何潛在偏差或異常值。
 
-![](https://hackmd.io/_uploads/rkXhhx7J6.png)
+目標值的範圍限制：
+範圍：[0, 1]。
+解釋：其中1表示更高的回報，這意味著目標值1表示該股票在該年度有更高的回報。
 
----
+基於百分位數的分箱：
+最後：對標準化的回報進行分箱，基於百分位數，這樣目標值的範圍是[0, 1]。
+目的：這有助於創建一個更均勻和有序的目標值分布，可以更好地用於機器學習模型的訓練。
 
-![](https://hackmd.io/_uploads/Hy7hne7yT.png)
+----
 
----
-
-![](https://hackmd.io/_uploads/rkQh3e7J6.png)
-
----
-
-![](https://hackmd.io/_uploads/Symnhl7J6.png)
