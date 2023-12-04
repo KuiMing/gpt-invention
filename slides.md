@@ -20,7 +20,8 @@ Start from here!
     - [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs/#Annual-Reports-on-Form-10-K)
     - 費用：29 美元/月
 - 建議：
-    - 使用爬蟲 [sec-edgar](https://github.com/sec-edgar/sec-edgar) 抓取 [SEC](https://www.sec.gov/edgar/searchedgar/companysearch) 的 10-k filings
+    - 使用爬蟲 [sec-edgar](https://github.com/sec-edgar/sec-edgar) 在 [SEC 美國證券交易委員會](https://www.sec.gov/edgar/searchedgar/companysearch) 抓取 10-k filings
+    - 免費
     - 免費
 
 ----
