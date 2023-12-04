@@ -28,15 +28,16 @@ Start from here!
 
 ### Stock Price
 - total 1505 stocks
-    - S&P500
-    - S&P400
-    - S&P600
+    - S&P500, S&P400, S&P600
+- 原作：
+    - [`openbb`](https://openbb.co/)
+- 建議：
+    - [`yfinance`](https://finance.yahoo.com/)：Yahoo! Finance
 
 ----
 
-- package: `openbb`
-    - https://openbb.co/
-    - ![](https://hackmd.io/_uploads/BktMtfN1a.png)
+<!-- .slide: data-background="https://hackmd.io/_uploads/BktMtfN1a.png" -->
+
 
 ---
 
