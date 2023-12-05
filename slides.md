@@ -174,10 +174,14 @@ https://huggingface.co/blog/mteb
 ---
 
 ## Cost: 
-
-- Money: $60
-- Time: 50 hours
-
+- 原作
+    - Money: $60
+    - Time: 50 hours
+- Ben
+    - Money: $122.46
+    - Time: 214 hours
+        - Embedding: 190 hours
+        - Confidence Score: 24 hours
 
 ---
 
