@@ -100,10 +100,10 @@
 
 ### Annual Report (10-k filings)
 
-- 原作：
+- 原作使用：
     - [Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs/#Annual-Reports-on-Form-10-K)
     - 費用：29 美元/月
-- 建議：
+- 建議使用：
     - 使用爬蟲 [sec-edgar](https://github.com/sec-edgar/sec-edgar) 在 [SEC 美國證券交易委員會](https://www.sec.gov/edgar/searchedgar/companysearch) 抓取 10-k filings
     - 免費
     - 免費
@@ -113,9 +113,9 @@
 ### Stock Price
 - total 1505 stocks
     - S&P500, S&P400, S&P600
-- 原作：
+- 原作使用：
     - [`openbb`](https://openbb.co/)
-- 建議：
+- 建議使用：
     - [`yfinance`](https://finance.yahoo.com/)：Yahoo! Finance
 
 ----
@@ -134,12 +134,6 @@
     - Embedding Model: all-mpnet-base-v2
     - Vector DB: Chroma
 - 準備 27 關於財報的問題
-
-----
-
-### Sample
-
-
 
 
 
@@ -162,7 +156,7 @@ embedding_model = LangchainEmbedding(
 
 ---
 
-### Massive Text Embedding Benchmark
+#### Massive Text Embedding Benchmark
 https://huggingface.co/blog/mteb
 ![](https://hackmd.io/_uploads/Bkq8xozJT.png)
 
@@ -179,13 +173,6 @@ https://huggingface.co/blog/mteb
 
 ---
 
-## Vector DB
-
-Chroma
-
-
-
-
 ## Cost: 
 
 - Money: $60
@@ -196,43 +183,26 @@ Chroma
 
 ## Questions
 
-27 questions
+- 27 questions
+- 基於財報提出的問題
+- Paper 沒有明講，只有以下範例
+> Does the company have a clear strategy for growth and innovation? 
+> Are there any recent strategic initiatives or partnerships?
 
-```json
-{
-    "management":"Does the company have a clear strategy for growth and innovation? Are there any recent strategic initiatives or partnerships?"
-}
+----
 
----
+寄信問作者，作者回答......
 
-```
-1. feature_overall	
-2. feature_revenue_1	
-3. feature_revenue_2	
-4. feature_revenue_3	
-5. feature_profit_1	
-6. feature_profit_2	
-7. feature_debt_1	
-8. feature_cashflow_2	
-9. feature_dividend	
-10. feature_management_1	
-11. feature_management_2	
-12. feature_industry_1	
-13. feature_industry_2	
-14. feature_research	
-15. feature_guidance	
-16. feature_leadership	
-17. feature_macro	
-18. feature_diversification	
-19. feature_customerbase	
-20. feature_esg	
-21. feature_competition_1	
-22. feature_competition_2	
-23. feature_ip	
-24. feature_digitaltransformation
-25. feature_regulations	
-26. feature_onlinepresence	
-27. feature_legal
+----
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X_9lP3hM--E?si=zUgn6G2QIYAOazdY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+----
+
+### 藏在程式碼的小提示
+
+![image](https://hackmd.io/_uploads/r1gSqfhrT.png)
+
 
 
 ---
