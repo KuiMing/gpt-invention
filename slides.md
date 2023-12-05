@@ -4,8 +4,84 @@
 
 ---
 
-- 平均年化報酬 15%
-- 資金成長超過 10 倍
+## 用 27 個問題
+
+---
+
+## 平均年化報酬 15%
+
+---
+
+## 資金成長超過 10 倍
+
+---
+
+> Investment must be rational; if you can't understand it, don't do it.
+> 
+> —— Warren Buffett, *Forbes 400, 21 October 1991*
+
+----
+
+看財報來了解公司？
+
+----
+
+財報動不動就幾十頁......看得有點累......
+
+
+----
+
+這時候就要靠高級伴讀書僮- GPT！
+
+----
+
+## 以下是我不會講的
+
+- 原理
+- 數學
+- 明牌
+
+----
+
+## 以下是我會講的
+
+- 作法與流程
+- 血汗與花費
+- 地雷
+
+
+----
+
+先來問問 ChatGPT 問題～
+
+----
+
+
+<!-- .slide: data-background="https://hackmd.io/_uploads/HyIpLLjrT.png" -->
+
+
+----
+
+<!-- .slide: data-background="https://hackmd.io/_uploads/rJUTI8irT.png" -->
+
+
+----
+
+這時候應該要用 RAG
+
+## Retrival Augmented Generation
+
+----
+
+
+
+<!-- .slide: data-background-iframe="media/RAG.html" -->
+
+----
+
+![](https://python.langchain.com/assets/images/data_connection-95ff2033a8faa5f3ba41376c0f6dd32a.jpg)
+
+<font size=1>from: https://python.langchain.com/docs/modules/data_connection</font>
 
 ---
 
@@ -16,8 +92,11 @@
 ---
 
 ## Data
+- Annual Report --> Build 10-K Vector Database 
+- Stock Price --> Training Model 
 
----
+
+----
 
 ### Annual Report (10-k filings)
 
@@ -46,31 +125,38 @@
 
 ---
 
+## PreProcessing
+
+- Sampling
+    - train: 1k datapoints (out of 17.4k)
+    - test: 500 datapoints (out of 6.8k) 
+- Build Vector Store
+    - Embedding Model: all-mpnet-base-v2
+    - Vector DB: Chroma
+- 準備 27 關於財報的問題
+
+----
+
 ### Sample
 
-- train: 1k datapoints (out of 17.4k)
-- test: 500 datapoints (out of 6.8k) 
 
 
-
-## Cost: 
-
-- Money: $60
-- Time: 50 hours
 
 
 ---
 
-## Embedding Model
+### Embedding Model
 
-
-### all-mpnet-base-v2
-This is a sentence-transformers model: It maps sentences & paragraphs to a 768 dimensional dense vector space and can be used for tasks like clustering or semantic search.
-https://huggingface.co/sentence-transformers/all-mpnet-base-v2
+- all-mpnet-base-v2
+    - sentence-transformers model
+    - maps sentences & paragraphs to a 768 dimensional dense vector space
+    - used for tasks like clustering or semantic search
+    - https://huggingface.co/sentence-transformers/all-mpnet-base-v2
 
 
 ```python!
-embedding_model = LangchainEmbedding(   HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
+embedding_model = LangchainEmbedding(
+    HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
     ) 
 ```
 
@@ -80,23 +166,31 @@ embedding_model = LangchainEmbedding(   HuggingFaceEmbeddings(model_name="senten
 https://huggingface.co/blog/mteb
 ![](https://hackmd.io/_uploads/Bkq8xozJT.png)
 
----
+----
 
 ![](https://hackmd.io/_uploads/B1NrxsG16.png)
 
----
+----
 
-🏎 Maximum speed Models like Glove offer high speed, but suffer from a lack of context awareness resulting in low average MTEB scores.
-
-⚖️ Speed and performance Slightly slower, but significantly stronger, ==all-mpnet-base-v2== or all-MiniLM-L6-v2 provide a good balance between speed and performance.
-
-💪 Maximum performance Multi-billion parameter models like ST5-XXL, GTR-XXL or SGPT-5.8B-msmarco dominate on MTEB. They tend to also produce bigger embeddings like SGPT-5.8B-msmarco which produces 4096 dimensional embeddings requiring more storage!
+### all-mpnet-base-v2
+- Speed and performance balance
+- Slightly slower
+- Significantly stronger
 
 ---
 
 ## Vector DB
 
 Chroma
+
+
+
+
+## Cost: 
+
+- Money: $60
+- Time: 50 hours
+
 
 ---
 
@@ -236,8 +330,11 @@ Chroma
 
 ----
 
-- 年化報酬率：14%
-- 最大交易回落：28%
+## 年化報酬率：14%
+
+----
+
+## 最大交易回落：28%
 
 ----
 
