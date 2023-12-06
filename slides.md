@@ -517,7 +517,7 @@ ETF and Chill
 ## 徵才
 
 
-|                      Data 趕快來                      |                  直接跟 Ben 聯絡                   |
+|                      Data 人材趕快來                      |                  直接跟 Ben 聯絡                   |
 |:--------------------------------------------------:|:--------------------------------------------------:|
 | ![image](https://hackmd.io/_uploads/rJodZbCBp.png) | ![image](https://hackmd.io/_uploads/HyxVEZAHp.png) |
 |<font size=5>https://www.onelab.tw/Partner.html</font> | <font size=5>benjamin0901@gmail.com</font> |
