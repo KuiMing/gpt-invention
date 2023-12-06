@@ -14,26 +14,35 @@
   </head>
   <body>
     <div class="'content">
-        <h1>流程</h1>
+        <h1>GPT-InvestAR</h1>
         <pre class="mermaid">
             graph TD;
-            subgraph Build 10-K Vector Database
-            A[Annual Report]-->|all-mpnet-base-v2|B[Embedding Vector]-->|Llama-index|C[(Chroma)]
+            subgraph Creat_Feature
+              subgraph Build_10-K_Vector_Database
+              A[Annual Report]-->|all-mpnet-base-v2|B[Embedding Vector]-->|Llama-index|C[(Chroma)]
+              end
+              C-->F[Find Report Chunk];
+              subgraph Deal_with_Questions
+              D[Question]-->|all-mpnet-base-v2|E[Embedding Vector]
+              end
+              E-->F-->|GPT-3.5-Trubo|G[Confidence Score]
             end
-            C-->F[Find Report Chunk];
-            subgraph Deal_with_Questions
-            D[Question]-->|all-mpnet-base-v2|E[Embedding Vector]
+            subgraph Make_Target
+            K[Stock Price] -->|Preprocessing|I[Target alue]
             end
-            E-->F-->|GPT-3.5-Trubo|G[Confidence Score]
-            subgraph Training
+            subgraph Model_Training
             G-->H[Linear Regression]
-            I[Target Value]-->H
+            I-->H
             end
             H-->J[Prediction Return]
-            classDef orange fill:#FFE4CA,stroke:#333
+            classDef o1 fill:#FFE4CA,stroke:#333
+            classDef o2 fill:#FFEEDD,stroke:#333
+            classDef o3 fill:#FFDCB9,stroke:#333 
             classDef red fill:#FFB5B5,stroke:#333
-            class Deal_with_Questions orange
-            class Training red
+            class Deal_with_Questions o1
+            class Model_Training red
+            class Build_10-K_Vector_Database o2
+            class Creat_Feature o3
         </pre>
     </div>
     <script type="module">
