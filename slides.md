@@ -63,12 +63,12 @@
 ----
 
 
-<!-- .slide: data-background="https://hackmd.io/_uploads/HyIpLLjrT.png" -->
+<!-- .slide: data-background="media/chatgpt_1.png" -->
 
 
 ----
 
-<!-- .slide: data-background="https://hackmd.io/_uploads/rJUTI8irT.png" -->
+<!-- .slide: data-background="media/chatgpt_2.png" -->
 
 
 ----
@@ -96,7 +96,7 @@
 
 ----
 
-![](https://python.langchain.com/assets/images/data_connection-95ff2033a8faa5f3ba41376c0f6dd32a.jpg)
+![](media/embedding.jpeg)
 
 <font size=1>from: https://python.langchain.com/docs/modules/data_connection</font>
 
@@ -140,7 +140,7 @@
 
 ----
 
-<!-- .slide: data-background="https://hackmd.io/_uploads/BktMtfN1a.png" -->
+<!-- .slide: data-background="media/stock_price.png" -->
 
 
 ---
@@ -258,11 +258,11 @@ Note:
 
 #### Massive Text Embedding Benchmark
 https://huggingface.co/blog/mteb
-![](https://hackmd.io/_uploads/Bkq8xozJT.png)
+![](media/mteb_diagram_white_background.png)
 
 ----
 
-![](https://hackmd.io/_uploads/B1NrxsG16.png)
+![](media/benchmark.png)
 
 ----
 
@@ -292,7 +292,7 @@ https://huggingface.co/blog/mteb
 
 ### 藏在程式碼的小提示
 
-![image](https://hackmd.io/_uploads/r1gSqfhrT.png)
+![image](media/features.png)
 
 
 ----
@@ -342,7 +342,7 @@ https://huggingface.co/blog/mteb
 
 ### RAG 的效果
 
-![](https://hackmd.io/_uploads/SJUUtn6HT.png)
+![](media/rag_result.png)
 The confidence score for the company's revenue performance in the last fiscal year is 95 out of 100.
 
 ----
@@ -397,32 +397,32 @@ The confidence score for the company's revenue performance in the last fiscal ye
 ----
 
 
-<!-- .slide: data-background="https://hackmd.io/_uploads/BksjiDtr6.png" -->
+<!-- .slide: data-background="media/result_12m_k.png" -->
 
 ----
 
-<!-- .slide: data-background="https://hackmd.io/_uploads/HyC4hwYST.png" -->
+<!-- .slide: data-background="media/result_max_k.png" -->
 
-
-----
-
-
-<!-- .slide: data-background="https://hackmd.io/_uploads/B1CVnPKHp.png" -->
-
-----
-
-<!-- .slide: data-background="https://hackmd.io/_uploads/HyCVnwFra.png" -->
 
 ----
 
 
-
-
-<!-- .slide: data-background="https://hackmd.io/_uploads/rJCE2PFHa.png" -->
+<!-- .slide: data-background="media/result_12m_12m.png" -->
 
 ----
 
-<!-- .slide: data-background="https://hackmd.io/_uploads/rJ0VhvFB6.png" -->
+<!-- .slide: data-background="media/result_12m_max.png" -->
+
+----
+
+
+
+
+<!-- .slide: data-background="media/result_max_12m.png" -->
+
+----
+
+<!-- .slide: data-background="media/result_max_max.png" -->
 
 ----
 
@@ -519,7 +519,7 @@ ETF and Chill
 
 |                      Data 人材趕快來                      |                  直接跟 Ben 聯絡                   |
 |:--------------------------------------------------:|:--------------------------------------------------:|
-| ![image](https://hackmd.io/_uploads/rJodZbCBp.png) | ![image](https://hackmd.io/_uploads/HyxVEZAHp.png) |
+| ![](media/QR_OnLab.png) | ![](media/QR_Facebook.png) |
 |<font size=5>https://www.onelab.tw/Partner.html</font> | <font size=5>benjamin0901@gmail.com</font> |
 
 ----
