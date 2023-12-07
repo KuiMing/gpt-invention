@@ -202,9 +202,9 @@
 ### Make Target
 
 - Target:
-    - 12-Month Return: 
+    - 12-Month Return: 年報酬率
         - Annual Return 
-    - Max Return:
+    - Max Return: 最大報酬率
         - 98th percentile of return from the filing date represented as Target Max
 
 
@@ -389,13 +389,18 @@ The confidence score for the company's revenue performance in the last fiscal ye
 - Input
     - Confidence Scores from GPT-3.5-Turbo
 - Output- Target Value
-    - 12-Month Return 
-    - Max Return
+    - 12-Month Return 年報酬率
+    - Max Return 最大報酬率
 
 
 ---
 
 ## Result
+
+
+----
+
+### 挑出最強 K 檔股票
 
 ----
 
@@ -406,6 +411,16 @@ The confidence score for the company's revenue performance in the last fiscal ye
 
 <!-- .slide: data-background="media/result_max_k.png" -->
 
+
+----
+
+### 假設一開始投入 $1 
+- 每年選擇最強 5 檔股票
+- 複利
+- 四種排列組合
+    - 以年報酬率模型和最大報酬率模型
+        - 預測年報酬率
+        - 預測最大報酬率
 
 ----
 
@@ -433,8 +448,8 @@ The confidence score for the company's revenue performance in the last fiscal ye
 
 - 每間公司 10-K filings 公佈時間不會集中在某段時間，而是散佈在 12 個月
 - 若在年底觀察完該年度所有公司的 10-K filings，卻發現....
-    - 最強股票其實在一月就公布財報了......
-    - 需要時光機.....
+    - 最強股票其實在一月就公布財報了...... <!-- .element: class="fragment" data-fragment-index="1" -->
+    - 需要時光機..... <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ----
 
