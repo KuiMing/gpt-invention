@@ -100,11 +100,16 @@
 
 <font size=1>from: https://python.langchain.com/docs/modules/data_connection</font>
 
-----
+---
+
+投資一定有風險，基金投資有賺有賠，申購前應詳閱公開說明書。
+
+---
 
 <!-- .slide: data-background="#999999" -->
 
 <!-- .slide: data-background-iframe="media/flow.html" -->
+
 
 ---
 
