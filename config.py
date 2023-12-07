@@ -192,7 +192,7 @@ REVEAL_CONFIG = {
     # Exposes the reveal.js API through window.postMessage
     "postMessage": True,
     # Dispatches all reveal.js events to the parent window through postMessage
-    "postMessageEvents": False,
+    # "postMessageEvents": False,
     # Focuses body when page changes visibility to ensure keyboard
     # shortcuts work
     "focusBodyOnPageVisibilityChange": True,
