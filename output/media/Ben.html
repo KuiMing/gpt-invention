@@ -6,9 +6,9 @@
 <head>
 <style>
     .w3-content {
-        max-width: 900px; /* 或您期望的最大寬度 */
-        margin: auto; /* 水平居中 */
-    }
+            max-width: 75%; /* 使用百分比以適應不同螢幕尺寸 */
+            margin: auto; /* 水平居中 */
+        }
 
     blockquote {
         font-style: italic;
@@ -21,6 +21,12 @@
     body {
         background-color: white;
     }
+    @media (max-width: 600px) {
+            .w3-half {
+                width: 100%; /* 在小屏幕上將兩欄布局改為單欄 */
+                margin-bottom: 20px; /* 為了美觀增加底部間隔 */
+            }
+        }
 </style>
 </head>
 <body>
