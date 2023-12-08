@@ -122,6 +122,15 @@
 
 ----
 
+
+<!-- .slide: data-background="#ffffff" -->
+
+
+<!-- .slide: data-background-iframe="media/2023-02-24.htm" -->
+
+
+----
+
 ### Annual Report (10-K filings)
 
 - 原作使用：
@@ -237,7 +246,7 @@ Note:
 ### Create Feature
 
 - Build Vector Store
-    - Embedding Model: all-mpnet-base-v2
+    - Model: all-mpnet-base-v2
     - Vector DB: Chroma
 - Feature: Confidence Score
     - 準備關於財報的問題
@@ -248,11 +257,11 @@ Note:
 ----
 
 
-### Embedding Model
+### Sentence-Transformers Model
 
 - all-mpnet-base-v2
-    - sentence-transformers model
     - maps sentences & paragraphs to a 768 dimensional dense vector space
+    - Can be used for tasks like clustering or semantic search
     - https://huggingface.co/sentence-transformers/all-mpnet-base-v2
 
 
@@ -499,11 +508,16 @@ The confidence score for the company's revenue performance in the last fiscal ye
 
 ---
 
-但這個做法可能比較適合有錢人
+這個做法，會不會很花錢啊？
 
-----
+---
 
-如果資金比較不充足的話，還是......
+<!-- .slide: data-background-iframe="media/rolling_k_return_expense.html" -->
+
+
+---
+
+如果不想麻煩的話，還是......
 
 ----
 
