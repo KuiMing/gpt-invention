@@ -144,9 +144,9 @@
 
 ### Stock Price
 - total 1505 stocks
-    - S&P 500
-    - S&P 400
-    - S&P 600
+    - S&P 500 (大)
+    - S&P 400 (中)
+    - S&P 600 (小)
 - 原作使用：
     - [`openbb`](https://openbb.co/)
 - 建議使用：
