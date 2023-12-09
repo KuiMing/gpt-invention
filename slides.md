@@ -1,6 +1,7 @@
 # 投資？我都交給我的高級伴讀書僮- GPT！
 
-
+Note:
+    耽誤一下各位下午打瞌睡的時間，讓我分享一點點有點有趣有點興奮的小東西，讓你們稍微提神一下
 
 ---
 
@@ -532,6 +533,14 @@ ETF and Chill
     - 利用分數建立 Machine Learning Model
 - 實際的進出場策略，須考慮實務上的情況
 
+----
+
+# 財報靠 GPT
+
+----
+
+# 投資靠自己
+
 ---
 
 <!-- .slide: data-background="media/AI_music_QR.png" -->
@@ -549,7 +558,7 @@ ETF and Chill
 ## 徵才
 
 
-|                      Data 人材趕快來                      |                  直接跟 Ben 聯絡                   |
+|                      Data 人才趕快來                      |                  直接跟 Ben 聯絡                   |
 |:--------------------------------------------------:|:--------------------------------------------------:|
 | ![](media/QR_OnLab.png) | ![](media/QR_Facebook.png) |
 |<font size=5>https://www.onelab.tw/Partner.html</font> | <font size=5>benjamin0901@gmail.com</font> |
