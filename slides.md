@@ -523,7 +523,7 @@ The confidence score for the company's revenue performance in the last fiscal ye
 
 ETF and Chill
 
-----
+---
 
 ## 總結
 
