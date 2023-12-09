@@ -85,7 +85,7 @@ Note:
 ----
 
 
-這時候應該要用 RAG
+看起來，我們可以試試 RAG
 
 ## Retrival Augmented Generation
 
