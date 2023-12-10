@@ -524,6 +524,15 @@ The confidence score for the company's revenue performance in the last fiscal ye
 
 ETF and Chill
 
+
+---
+
+## 下一步，還能做什麼？
+
+- 抽換 embedding model
+- 讓 GPT 看完所有財報
+- 改變問題
+
 ---
 
 ## 總結
@@ -562,6 +571,12 @@ ETF and Chill
 |:--------------------------------------------------:|:--------------------------------------------------:|
 | ![](media/QR_OnLab.png) | ![](media/QR_Facebook.png) |
 |<font size=5>https://www.onelab.tw/Partner.html</font> | <font size=5>benjamin0901@gmail.com</font> |
+
+---
+
+# 投影片
+
+![](media/QR_slide.png)
 
 ----
 
