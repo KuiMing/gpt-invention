@@ -7,7 +7,7 @@ with the default options.
 
 REVEAL_META = {
     # Title of the slide
-    "title": "gpt-invention",
+    "title": "gpt-invest",
     # Author in the metadata of the slide
     "author": "Ben Chen",
     # Description in the metadata of the slide
