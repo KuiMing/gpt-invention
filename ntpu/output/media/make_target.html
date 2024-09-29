@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+        html, body {
+            height: 100%; 
+            margin: 0;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            display: inline-block; /* Allows text-align to center it */
+            text-align: left; /* Aligns the text inside the pre block to the left */
+        }
+    </style>
+  </head>
+  <body>
+    <div class="'content">
+        <h1>Make Target</h1>
+        <pre class="mermaid">
+            graph TD;
+ 
+            subgraph Make_Target
+            K[Stock Price] -->|Preprocessing|I[Target Value]
+            end
+            
+            classDef o1 fill:#FFE4CA,stroke:#333
+            classDef o2 fill:#FFEEDD,stroke:#333
+            classDef o3 fill:#FFDCB9,stroke:#333 
+            classDef red fill:#FFB5B5,stroke:#333
+            class Deal_with_Questions o1
+            class Training red
+            class Build_10-K_Vector_Database o2
+            class Creat_Feature o3
+        </pre>
+    </div>
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    </script>
+  </body>
+</html>
