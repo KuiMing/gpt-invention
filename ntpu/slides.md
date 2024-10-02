@@ -727,11 +727,17 @@ https://github.com/data-reporter/10th_Legislator_Speech
 - **AI 幫助學習**：
     - GenAI 幫助非技術人員學會程式，完成實際專案
 
+---
+
+## 投影片
+![](media/qrcode.png)
+
 ----
 
-- 投影片：https://reurl.cc/rrGmpb
-- Facebook：https://reurl.cc/67O1W6
-- R-Ladies Taipei：https://www.facebook.com/groups/RLadiesTaipei
+## `R-Ladies Taipei`
+
+
+![](media/QR_R_Ladies_Taipei.png)
 
 ----
 
