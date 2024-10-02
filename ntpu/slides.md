@@ -17,14 +17,22 @@
 
 ## Outline
 
-- RAG- Retrival Augmented Generation
+- RAG ⮕ Retrival-Augmented Generation
 - AI Knowledge Management
 - 投資買美股
 - 監督立委
 
 ---
 
-# Retrival Augmented Generation
+# Retrival-Augmented Generation
+
+----
+
+<font color='#FF2D2D'>Retrival</font>-<font color='#66B3FF'>Augmented</font> <font color='#79FF79'>Generation</font>
+## 透過<font color='#FF2D2D'>檢索</font><font color='#66B3FF'>加強</font><font color='#79FF79'>生成</font>答案的能力
+
+##### ~~關鍵字搜尋~~<!-- .element: class="fragment" data-fragment-index="1" --> 
+#### ⮕ 利用向量搜尋 <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ----
 
@@ -78,7 +86,7 @@ $$
 
 ----
 
-### `Retrival Augmented Generation`
+### `Retrival-Augmented Generation`
 
 - 結合『檢索』和『生成』，從外部知識中獲取答案
 - 首先，將文件轉換成向量，存入向量資料庫
@@ -275,7 +283,12 @@ def get_response(
 
 ----
 
-<!-- .slide: data-background="media/chatgpt_2.png" -->
+<!-- .slide: data-background="media/chatgpt_4o.png" -->
+
+
+----
+
+<!-- .slide: data-background="media/chatgpt_o1.png" -->
 
 
 ----
