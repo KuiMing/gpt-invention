@@ -293,10 +293,6 @@ def get_response(
 
 ----
 
-發現一篇可能可以解決我的問題的 Paper
-
-----
-
 ## `GPT-InvestAR`
 
 > Gupta, U. (2023). GPT-InvestAR: Enhancing Stock Investment Strategies through Annual Report Analysis with Large Language Models. arXiv. https://arxiv.org/abs/2309.03079
@@ -320,11 +316,16 @@ def get_response(
     - 2002 ~ 2023
 - Annual Report 
     - 10-K Filings
-    - ~~[Financial Modeling Prep](https://site.financialmodelingprep.com/developer/docs/#Annual-Reports-on-Form-10-K)~~⮕[edgar-crawler](https://github.com/nlpaueb/edgar-crawler)
-    - $ 29 ⮕ free <!-- .element: class="fragment" data-fragment-index="1" -->
+    - 美國證券交易委員會 SEC
+    - [edgar-crawler](https://github.com/nlpaueb/edgar-crawler)
 - Stock Price
     - 每日收盤價 (Adj Close)
-    - ~~[`openbb`](https://openbb.co/)~~ ⮕ Yahoo! Finace 
+    - Yahoo! Finace 
+
+Note:
+    美國證券交易委員會 SEC https://www.sec.gov/edgar/searchedgar/companysearch
+    分年分配目標值：目的：為了在每年內相對排名股票的回報。方法：每年單獨分配股票的目標值，這樣可以更好地比較同一年內不同股票的表現。回報的排名和標準化：首先：回報首先被排名，這意味著根據其回報率對股票進行排序。然後：然後對排名後的回報進行標準化，這有助於消除數據中的任何潛在偏差或異常值。目標值的範圍限制：範圍：[0, 1]。解釋：其中1表示更高的回報，這意味著目標值1表示該股票在該年度有更高的回報。基於百分位數的分箱：最後：對標準化的回報進行分箱，基於百分位數，這樣目標值的範圍是[0, 1]。目的：這有助於創建一個更均勻和有序的目標值分布，可以更好地用於機器學習模型的訓練。
+
 
 ----
 
@@ -366,32 +367,6 @@ def get_response(
 ----
 
 
-
-<!-- .slide: data-background="#999999" -->
-
-<!-- .slide: data-background-iframe="media/flow.html" -->
-
-----
-
-
-<!-- .slide: data-background="#999999" -->
-
-<!-- .slide: data-background-iframe="media/make_target.html" -->
-
-
-----
-
-### Make Target
-
-- Target:
-    - 12-Month Return: 年報酬率
-        - Annual Return 
-    - Max Return: 最大報酬率
-        - 98th percentile of return from the filing date represented as Target Max
-
-
-----
-
 ### Make Target
 
 - 將抽樣後的報酬率，依每年排序
@@ -403,57 +378,19 @@ Note:
 
 ----
 
-<!-- .slide: data-background="#999999" -->
 
-<!-- .slide: data-background-iframe="media/flow.html" -->
-
-----
-
-
-<!-- .slide: data-background="#999999" -->
-
-<!-- .slide: data-background-iframe="media/create_feature.html" -->
-
-----
 
 ### Create Feature
 
-- Build Vector Store
-    - Model: all-mpnet-base-v2
-    - Vector DB: Chroma
+
 - Feature: Confidence Score
-    - 準備關於財報的問題
-    - 請 GPT (GPT-3.5-Turbo) 依照公司的財報回答問題，給予評分
+    - 請 GPT (GPT-3.5-Turbo) 依照公司的財報回答問題，給予<font color='red'>評分</font>
+        - 為財報建立 Vector Store
+            - Model: [all-<font color='red'>mpnet</font>-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2)
+            - Vector DB: Chroma
+        - 準備關於財報的問題
+        
 
-
-----
-
-
-### `Sentence-Transformers Model`
-
-- all-mpnet-base-v2
-    - maps sentences & paragraphs to a 768 dimensional dense vector space
-    - Can be used for tasks like clustering or semantic search
-    - https://huggingface.co/sentence-transformers/all-mpnet-base-v2
-
-
-
-----
-
-#### `Massive Text Embedding Benchmark`
-https://huggingface.co/blog/mteb
-![](media/mteb_diagram_white_background.png)
-
-----
-
-![](media/benchmark.png)
-
-----
-
-### `all-mpnet-base-v2`
-- Speed and performance balance
-- Slightly slower
-- Significantly stronger
 
 ----
 
@@ -465,7 +402,6 @@ https://huggingface.co/blog/mteb
 > Are there any recent strategic initiatives or partnerships?
 
 ----
-
 
 ### 藏在程式碼的小提示
 
@@ -511,7 +447,7 @@ https://huggingface.co/blog/mteb
 
 ----
 
-### RAG- 利用 index 和 prompt template 提問
+### RAG- 利用 prompt template 提問
 
 
 ```python
@@ -566,11 +502,19 @@ score: 90
 
 ----
 
+## Model
+
+- Linear Regression: enforces non-negativity in the coefficients
+    - Input
+        - Confidence Scores from GPT-3.5-Turbo
+    - Output
+        - Target Value from Stock Price
+
+----
+
 ## Cost
 
 - Money: $122.46 + $29 = $151.46
-    - Azure OpenAI: $122.46
-    - Financial Modeling Prep: $29
 - Time: 214 hours
     - Build Vector Store: 190 hours
     - Get Confidence Score: 24 hours
@@ -578,36 +522,6 @@ score: 90
 - Storage: ~115 G
 
 
-----
-
-## Model Training
-
-----
-
-
-<!-- .slide: data-background="#999999" -->
-
-<!-- .slide: data-background-iframe="media/flow.html" -->
-
-----
-
-
-<!-- .slide: data-background="#999999" -->
-
-<!-- .slide: data-background-iframe="media/training.html" -->
-
-
-----
-
-## Model
-
-- Linear Regression: 
-    - enforces non-negativity in the coefficients
-- Input
-    - Confidence Scores from GPT-3.5-Turbo
-- Output- Target Value
-    - 12-Month Return 年報酬率
-    - Max Return 最大報酬率
 
 
 ----
