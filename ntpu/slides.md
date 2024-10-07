@@ -61,7 +61,7 @@
 ----
 ### 密集向量 (Dense Vectors)
 - 所有元素都有具體數值，沒有或很少有零值。
-- 每個數字代表某種隱含語義或特徵，常用於詞嵌入、圖像特徵提取等領域。
+- 每個數字代表某種隱含語義或特徵，常用於 word embedding、圖像特徵提取等領域。
 - 資訊量大、緊湊且適合相似度計算，如 Cosine Similarity。
 - 今天天氣好好 ⮕ 
 
@@ -394,23 +394,9 @@ Note:
 
 ----
 
-### 準備關於財報的問題
+### 準備關於財報的問題- 直接交給 GPT
 
-- 27 Questions
-- Paper 沒有明講，只有以下範例
-> Does the company have a clear strategy for growth and innovation? 
-> Are there any recent strategic initiatives or partnerships?
-
-----
-
-### 藏在程式碼的小提示
-
-![image](media/features.png)
-
-
-----
-
-### GPT 幫我問問題
+- 利用關鍵字產生 27 個問題
 
 ```
 {
