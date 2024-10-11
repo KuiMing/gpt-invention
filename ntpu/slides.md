@@ -729,7 +729,7 @@ https://github.com/data-reporter/10th_Legislator_Speech
 ## `R-Ladies Taipei`
 
 
-![](media/QR_R_Ladies_Taipei.png)
+<img src=media/QR_R_Ladies_Taipei.png width=50%></img>
 
 ----
 
